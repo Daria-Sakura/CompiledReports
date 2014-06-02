@@ -28,47 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
+            this.signinBtn = new System.Windows.Forms.Button();
+            this.login = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
+            this.registerLnk = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // button1
+            // signinBtn
             // 
-            this.button1.Location = new System.Drawing.Point(164, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 69);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.signinBtn.Location = new System.Drawing.Point(63, 105);
+            this.signinBtn.Name = "signinBtn";
+            this.signinBtn.Size = new System.Drawing.Size(127, 40);
+            this.signinBtn.TabIndex = 0;
+            this.signinBtn.Text = "Sign In";
+            this.signinBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // login
             // 
-            this.button2.Location = new System.Drawing.Point(352, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 69);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.login.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.login.Location = new System.Drawing.Point(26, 22);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(164, 20);
+            this.login.TabIndex = 2;
+            this.login.Text = "Login";
+            // 
+            // password
+            // 
+            this.password.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.password.Location = new System.Drawing.Point(26, 62);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(164, 20);
+            this.password.TabIndex = 3;
+            this.password.Text = "Password";
+            // 
+            // registerLnk
+            // 
+            this.registerLnk.Location = new System.Drawing.Point(135, 166);
+            this.registerLnk.Name = "registerLnk";
+            this.registerLnk.Size = new System.Drawing.Size(55, 13);
+            this.registerLnk.TabIndex = 0;
+            this.registerLnk.TabStop = true;
+            this.registerLnk.Text = "Register";
             // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 233);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(224, 217);
+            this.Controls.Add(this.registerLnk);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.login);
+            this.Controls.Add(this.signinBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AuthorizationForm";
-            this.Text = "Authorization Step";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Authorization";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button signinBtn;
+        private System.Windows.Forms.TextBox login;
+        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.LinkLabel registerLnk;
     }
 }
 
