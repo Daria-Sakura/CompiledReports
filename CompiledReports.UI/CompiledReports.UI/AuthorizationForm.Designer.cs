@@ -33,11 +33,12 @@
             this.login = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
             this.registerLnk = new System.Windows.Forms.LinkLabel();
+            this.remembermeCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // signinBtn
             // 
-            this.signinBtn.Location = new System.Drawing.Point(63, 105);
+            this.signinBtn.Location = new System.Drawing.Point(63, 130);
             this.signinBtn.Name = "signinBtn";
             this.signinBtn.Size = new System.Drawing.Size(127, 40);
             this.signinBtn.TabIndex = 0;
@@ -64,18 +65,30 @@
             // 
             // registerLnk
             // 
-            this.registerLnk.Location = new System.Drawing.Point(135, 166);
+            this.registerLnk.Location = new System.Drawing.Point(135, 195);
             this.registerLnk.Name = "registerLnk";
             this.registerLnk.Size = new System.Drawing.Size(55, 13);
             this.registerLnk.TabIndex = 0;
             this.registerLnk.TabStop = true;
             this.registerLnk.Text = "Register";
+            this.registerLnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLnk_LinkClicked);
+            // 
+            // remembermeCheckBox
+            // 
+            this.remembermeCheckBox.AutoSize = true;
+            this.remembermeCheckBox.Location = new System.Drawing.Point(26, 98);
+            this.remembermeCheckBox.Name = "remembermeCheckBox";
+            this.remembermeCheckBox.Size = new System.Drawing.Size(94, 17);
+            this.remembermeCheckBox.TabIndex = 4;
+            this.remembermeCheckBox.Text = "Remember me";
+            this.remembermeCheckBox.UseVisualStyleBackColor = true;
             // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(224, 217);
+            this.Controls.Add(this.remembermeCheckBox);
             this.Controls.Add(this.registerLnk);
             this.Controls.Add(this.password);
             this.Controls.Add(this.login);
@@ -84,6 +97,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AuthorizationForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authorization";
             this.ResumeLayout(false);
@@ -97,6 +111,7 @@
         private System.Windows.Forms.TextBox login;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.LinkLabel registerLnk;
+        private System.Windows.Forms.CheckBox remembermeCheckBox;
     }
 }
 

@@ -17,5 +17,20 @@ namespace CompiledReports.UI
             InitializeComponent();
         }
 
+        private void registerLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.FormClosed += new FormClosedEventHandler(registrationForm_FormClosed);
+            registrationForm.Show();
+        }
+
+        private void registrationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //this.Close();
+            this.Show();
+        }
+
+        
     }
 }
