@@ -55,6 +55,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>GeneralSettings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Placeholders.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationForm.cs">

@@ -18,6 +18,8 @@ namespace CompiledReports.UI
             InitializeComponent();
         }
 
+        private string preFocusedValue = String.Empty;
+
         private void registerLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -43,12 +45,21 @@ namespace CompiledReports.UI
 
         private void txtBox_OnFocusLost(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            TextBox txtBox = (TextBox)sender;
+            if (txtBox.Text == String.Empty)
+            {
+                txtBox.Text = preFocusedValue;
+            }
         }
 
         private void txtBox_OnFocus(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            TextBox txtBox = (TextBox)sender;
+            preFocusedValue = txtBox.Text;
+            if( Enum.IsDefined(typeof(Placeholders), preFocusedValue) )
+            {
+                txtBox.Text = String.Empty;
+            }
         }
 
         private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
