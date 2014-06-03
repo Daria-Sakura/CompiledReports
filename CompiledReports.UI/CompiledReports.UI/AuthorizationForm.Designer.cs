@@ -38,68 +38,50 @@
             // 
             // signinBtn
             // 
-            this.signinBtn.Location = new System.Drawing.Point(63, 130);
+            resources.ApplyResources(this.signinBtn, "signinBtn");
             this.signinBtn.Name = "signinBtn";
-            this.signinBtn.Size = new System.Drawing.Size(127, 40);
-            this.signinBtn.TabIndex = 0;
-            this.signinBtn.Text = "Sign In";
             this.signinBtn.UseVisualStyleBackColor = true;
             // 
             // login
             // 
+            resources.ApplyResources(this.login, "login");
             this.login.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.login.Location = new System.Drawing.Point(26, 22);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(164, 20);
-            this.login.TabIndex = 2;
-            this.login.Text = "Login";
             // 
             // password
             // 
+            resources.ApplyResources(this.password, "password");
             this.password.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.password.Location = new System.Drawing.Point(26, 62);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(164, 20);
-            this.password.TabIndex = 3;
-            this.password.Text = "Password";
             // 
             // registerLnk
             // 
-            this.registerLnk.Location = new System.Drawing.Point(135, 195);
+            resources.ApplyResources(this.registerLnk, "registerLnk");
             this.registerLnk.Name = "registerLnk";
-            this.registerLnk.Size = new System.Drawing.Size(55, 13);
-            this.registerLnk.TabIndex = 0;
             this.registerLnk.TabStop = true;
-            this.registerLnk.Text = "Register";
             this.registerLnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLnk_LinkClicked);
             // 
             // remembermeCheckBox
             // 
-            this.remembermeCheckBox.AutoSize = true;
-            this.remembermeCheckBox.Location = new System.Drawing.Point(26, 98);
+            resources.ApplyResources(this.remembermeCheckBox, "remembermeCheckBox");
             this.remembermeCheckBox.Name = "remembermeCheckBox";
-            this.remembermeCheckBox.Size = new System.Drawing.Size(94, 17);
-            this.remembermeCheckBox.TabIndex = 4;
-            this.remembermeCheckBox.Text = "Remember me";
             this.remembermeCheckBox.UseVisualStyleBackColor = true;
             // 
             // AuthorizationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(224, 217);
             this.Controls.Add(this.remembermeCheckBox);
             this.Controls.Add(this.registerLnk);
             this.Controls.Add(this.password);
             this.Controls.Add(this.login);
             this.Controls.Add(this.signinBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AuthorizationForm";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Authorization";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AuthorizationForm_FormClosing);
+            this.Load += new System.EventHandler(this.AuthorizationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

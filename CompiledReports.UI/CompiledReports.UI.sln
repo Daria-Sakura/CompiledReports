@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompiledReports.BusinessLog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompiledReports.Web.UI", "..\CompiledReports.Web.UI\CompiledReports.Web.UI.csproj", "{A9E06312-14DE-4AC3-87EC-A5B7301B28A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompiledReports.Helpers", "..\CompiledReports.Helpers\CompiledReports.Helpers.csproj", "{32A20651-6902-492E-B8C1-FCDB02994224}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A9E06312-14DE-4AC3-87EC-A5B7301B28A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E06312-14DE-4AC3-87EC-A5B7301B28A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9E06312-14DE-4AC3-87EC-A5B7301B28A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A20651-6902-492E-B8C1-FCDB02994224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A20651-6902-492E-B8C1-FCDB02994224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A20651-6902-492E-B8C1-FCDB02994224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A20651-6902-492E-B8C1-FCDB02994224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompiledReports.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,31 @@ namespace CompiledReports.UI
             this.Show();
         }
 
-        
+        private void AuthorizationForm_Load(object sender, EventArgs e)
+        {
+            login.GotFocus += txtBox_OnFocus;
+            login.LostFocus += txtBox_OnFocusLost;
+            login.Text = GeneralSettings.Default.Login;
+            password.Text = GeneralSettings.Default.Password;
+            remembermeCheckBox.Checked = GeneralSettings.Default.IsRememberMe;
+        }
+
+        private void txtBox_OnFocusLost(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void txtBox_OnFocus(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GeneralSettings.Default.IsRememberMe = remembermeCheckBox.Checked;
+            GeneralSettings.Default.Login = login.Text;
+            GeneralSettings.Default.Password = CryptoHelper.GetMd5Hash(password.Text);
+            GeneralSettings.Default.Save();
+        }
     }
 }
