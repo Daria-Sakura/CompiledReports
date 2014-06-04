@@ -23,21 +23,5 @@ namespace CompiledReports.Helpers
  
             return sBuilder.ToString();
         }
-
-        //public static bool VerifyMd5Hash(MD5 md5Hash, string input, string hash)
-        //{
-        //    string hashOfInput = GetMd5Hash(md5Hash, input);
-
-        //    StringComparer comparer = StringComparer.OrdinalIgnoreCase;
-
-        //    if (comparer.Compare(hashOfInput, hash) == 0)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
     }
 }

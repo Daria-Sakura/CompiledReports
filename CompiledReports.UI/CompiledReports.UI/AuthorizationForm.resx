@@ -6306,6 +6306,9 @@
   <data name="password.Location" type="System.Drawing.Point, System.Drawing">
     <value>26, 62</value>
   </data>
+  <data name="&gt;&gt;remembermeCheckBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;password.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -6324,14 +6327,11 @@
   <data name="&gt;&gt;remembermeCheckBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="registerLnk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 195</value>
-  </data>
-  <data name="&gt;&gt;signinBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="password.Text" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="signinBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;password.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -6353,9 +6353,6 @@
   </data>
   <data name="signinBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 40</value>
-  </data>
-  <data name="&gt;&gt;registerLnk.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;signinBtn.Parent" xml:space="preserve">
     <value>$this</value>
@@ -6379,8 +6376,8 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="signinBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;signinBtn.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="remembermeCheckBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -6403,6 +6400,9 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
+  <data name="&gt;&gt;registerLnk.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="password.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 20</value>
   </data>
@@ -6418,11 +6418,11 @@
   <data name="remembermeCheckBox.Text" xml:space="preserve">
     <value>Remember me</value>
   </data>
-  <data name="&gt;&gt;remembermeCheckBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="registerLnk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 195</value>
   </data>
-  <data name="&gt;&gt;registerLnk.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;registerLnk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Authorization</value>

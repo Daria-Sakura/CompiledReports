@@ -79,7 +79,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "AuthorizationForm";
-            this.ShowIcon = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AuthorizationForm_FormClosing);
             this.Load += new System.EventHandler(this.AuthorizationForm_Load);
             this.ResumeLayout(false);

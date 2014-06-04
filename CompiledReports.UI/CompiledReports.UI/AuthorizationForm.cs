@@ -19,6 +19,7 @@ namespace CompiledReports.UI
         }
 
         private string preFocusedValue = String.Empty;
+        private string focusedTextBoxName = String.Empty;
 
         private void registerLnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -39,7 +40,11 @@ namespace CompiledReports.UI
             login.GotFocus += txtBox_OnFocus;
             login.LostFocus += txtBox_OnFocusLost;
             login.Text = GeneralSettings.Default.Login;
+
+            password.GotFocus += txtBox_OnFocus;
+            password.LostFocus += txtBox_OnFocusLost;
             password.Text = GeneralSettings.Default.Password;
+
             remembermeCheckBox.Checked = GeneralSettings.Default.IsRememberMe;
         }
 
@@ -48,7 +53,8 @@ namespace CompiledReports.UI
             TextBox txtBox = (TextBox)sender;
             if (txtBox.Text == String.Empty)
             {
-                txtBox.Text = preFocusedValue;
+                txtBox.Text = txtBox.Name.First().ToString().ToUpper() + String.Join("", txtBox.Name.Skip(1));
+                txtBox.ForeColor = SystemColors.InactiveCaption;
             }
         }
 
@@ -59,14 +65,23 @@ namespace CompiledReports.UI
             if( Enum.IsDefined(typeof(Placeholders), preFocusedValue) )
             {
                 txtBox.Text = String.Empty;
+                txtBox.ForeColor = SystemColors.ControlText;
             }
         }
 
         private void AuthorizationForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             GeneralSettings.Default.IsRememberMe = remembermeCheckBox.Checked;
-            GeneralSettings.Default.Login = login.Text;
-            GeneralSettings.Default.Password = CryptoHelper.GetMd5Hash(password.Text);
+            if (remembermeCheckBox.Checked)
+            {
+                GeneralSettings.Default.Login = login.Text;
+                GeneralSettings.Default.Password = CryptoHelper.GetMd5Hash(password.Text);
+            }
+            else
+            {
+                GeneralSettings.Default.Login = Placeholders.Login.ToString();//.ToDescription();
+                GeneralSettings.Default.Password = Placeholders.Password.ToString();//ToDescription();
+            }
             GeneralSettings.Default.Save();
         }
     }
