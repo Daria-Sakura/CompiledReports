@@ -31,7 +31,6 @@ namespace CompiledReports.UI
 
         private void registrationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //this.Close();
             this.Show();
         }
 
@@ -53,7 +52,7 @@ namespace CompiledReports.UI
             TextBox txtBox = (TextBox)sender;
             if (txtBox.Text == String.Empty)
             {
-                txtBox.Text = txtBox.Name.First().ToString().ToUpper() + String.Join("", txtBox.Name.Skip(1));
+                txtBox.Text = txtBox.Name.First().ToString().ToUpper() + String.Join(String.Empty, txtBox.Name.Skip(1));
                 txtBox.ForeColor = SystemColors.InactiveCaption;
             }
         }

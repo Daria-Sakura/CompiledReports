@@ -16,5 +16,10 @@ namespace CompiledReports.UI
         {
             InitializeComponent();
         }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

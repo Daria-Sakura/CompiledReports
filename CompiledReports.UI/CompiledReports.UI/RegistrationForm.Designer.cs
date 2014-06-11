@@ -29,16 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
-            this.cancelBtn = new System.Windows.Forms.Button();
             this.registerBtn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Abort;
-            resources.ApplyResources(this.cancelBtn, "cancelBtn");
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.UseVisualStyleBackColor = true;
             // 
             // registerBtn
             // 
@@ -46,24 +42,53 @@
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.UseVisualStyleBackColor = true;
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            resources.ApplyResources(this.cancelBtn, "cancelBtn");
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            // 
+            // textBox3
+            // 
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.Name = "textBox3";
+            // 
             // RegistrationForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ControlBox = false;
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.cancelBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "RegistrationForm";
-            this.ShowIcon = false;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button registerBtn;
+        private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

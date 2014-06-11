@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompiledReports.BusinessLogic
 {
-    public class Class1
+    public class AuthProvider
     {
     }
 }
